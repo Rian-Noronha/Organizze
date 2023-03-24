@@ -8,4 +8,13 @@
     <string name="desc2_img_tres">Receba alertas quando quiser</string>
     <string name="desc1_img_quatro">Tudo organizado no celular ou computador</string>
     <string name="desc2_img_quatro">Use no seu smartphone ou acesse o Organizze pelo site</string>
+    <string name="desc1_cadastro">Crie sua conta grátis</string>
+    <string name="desc2_cadastro">Junte-se a mais de um milhão de pessoas nesta grande aplicação de resolver problemas financeiros</string>
+    <string name="txt_btn">CADASTRE-SE</string>
+    <string name="desc3_cadastro">Já tenho conta</string>
+    <string name="title_cadastro">Crie sua conta grátis</string>
+    <string name="btn_cadastro">CADASTRAR</string>
+    <string name="btn_login">ENTRAR</string>
+    <string name="termo_uso_cadastro">Termos de uso</string>
+    <string name="title_login">Acesse sua conta</string>
 </resources>
