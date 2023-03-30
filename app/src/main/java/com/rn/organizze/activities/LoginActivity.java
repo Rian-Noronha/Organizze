@@ -1,8 +1,10 @@
-package com.rn.organizze;
+package com.rn.organizze.activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+
+import com.rn.organizze.R;
 
 public class LoginActivity extends AppCompatActivity {
 
