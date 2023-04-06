@@ -13,6 +13,9 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseAuthInvalidCredentialsException;
+import com.google.firebase.auth.FirebaseAuthUserCollisionException;
+import com.google.firebase.auth.FirebaseAuthWeakPasswordException;
 import com.rn.organizze.R;
 import com.rn.organizze.config.ConfiguracaoFirebase;
 import com.rn.organizze.model.Usuario;
@@ -67,9 +70,25 @@ public class CadastroActivity extends AppCompatActivity {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if(task.isSuccessful()){
-                    mostrarToast("Cadastrado na hora!!!");
+                    finish();
                 }else{
-                    mostrarToast("Deu ruim para cadastrar:)");
+
+                    String excecao = "";
+                    try{
+                        throw task.getException();
+                    }catch(FirebaseAuthWeakPasswordException e){
+                        excecao = "Senha fraquinha, tente uma mais forte:)";
+                    }catch (FirebaseAuthInvalidCredentialsException e){
+                        excecao = "Bote um email válido:)";
+                    }catch(FirebaseAuthUserCollisionException e){
+                        excecao = "Conta já colocada, bote outra:)";
+                    }catch(Exception e){
+                        excecao = "Erro ao cadastrar usuário: " + e.getMessage();
+                        e.printStackTrace();
+                    }
+
+
+                    mostrarToast(excecao);
                 }
             }
         });
