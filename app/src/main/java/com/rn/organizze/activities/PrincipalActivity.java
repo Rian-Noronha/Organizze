@@ -39,6 +39,15 @@ public class PrincipalActivity extends AppCompatActivity {
         });
     }
 
+    public void addReceita(View view){
+
+    }
+
+    public void addDespesa(View view){
+
+    }
+
+
     @Override
     public boolean onSupportNavigateUp() {
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_content_principal);
