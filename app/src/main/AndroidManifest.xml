@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools" >
+    xmlns:tools="http://schemas.android.com/tools">
 
     <application
         android:allowBackup="true"
@@ -10,7 +10,16 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/Theme.Organizze"
-        tools:targetApi="31" >
+        tools:targetApi="31">
+        <activity
+            android:name=".activities.DespesasActivity"
+            android:theme="@style/despesaTheme"
+            android:exported="false" />
+        <activity
+            android:name=".activities.ReceitasActivity"
+            android:exported="false"
+            android:label="@string/title_activity_receitas"
+            android:theme="@style/receitaTheme" />
         <activity
             android:name=".activities.PrincipalActivity"
             android:exported="false"
@@ -25,7 +34,7 @@
         <activity
             android:name=".activities.MainActivity"
             android:exported="true"
-            android:theme="@style/Theme.Intro" >
+            android:theme="@style/Theme.Intro">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
