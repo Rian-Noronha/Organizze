@@ -22,7 +22,7 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <EditText
-            android:id="@+id/editTextText"
+            android:id="@+id/editValorDespesas"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@android:color/transparent"
@@ -52,6 +52,7 @@
         app:layout_constraintVertical_chainStyle="packed">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editDataDespesas"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Ex.:19/10/2023"
@@ -73,6 +74,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textInputLayout2">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editCategoriaDespesas"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Ex.:Salário"
@@ -93,6 +95,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textInputLayout">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editDescricaoDespesas"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Ex.:Salário mensal"
@@ -100,12 +103,13 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/floatingActionButton"
+        android:id="@+id/fabSalvarDespesas"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="250dp"
         android:layout_marginBottom="16dp"
         android:clickable="true"
+        android:onClick="salvarDespesa"
         android:textAlignment="textEnd"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
