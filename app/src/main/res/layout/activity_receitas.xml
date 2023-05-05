@@ -22,7 +22,7 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <EditText
-            android:id="@+id/editValorDespesas"
+            android:id="@+id/editValorRceitas"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@android:color/transparent"
@@ -52,9 +52,11 @@
         app:layout_constraintVertical_chainStyle="packed">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editDataReceitas"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Ex.:19/10/2023" />
+            android:hint="Ex.:19/10/2023"
+            tools:ignore="TouchTargetSizeCheck" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
@@ -72,9 +74,11 @@
         app:layout_constraintTop_toBottomOf="@+id/textInputLayout2">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editCategoriaReceitas"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Ex.:Salário" />
+            android:hint="Ex.:Salário"
+            tools:ignore="TouchTargetSizeCheck" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
@@ -91,9 +95,11 @@
         app:layout_constraintTop_toBottomOf="@+id/textInputLayout">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editDescricaoReceitas"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Ex.:Salário mensal" />
+            android:hint="Ex.:Salário mensal"
+            tools:ignore="TouchTargetSizeCheck" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
@@ -103,6 +109,7 @@
         android:layout_marginTop="250dp"
         android:layout_marginBottom="16dp"
         android:clickable="true"
+        android:onClick="salvarReceita"
         android:textAlignment="textEnd"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

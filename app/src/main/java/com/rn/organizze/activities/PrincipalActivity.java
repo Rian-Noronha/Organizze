@@ -5,11 +5,7 @@ import android.os.Bundle;
 import com.google.android.material.snackbar.Snackbar;
 import androidx.appcompat.app.AppCompatActivity;
 import android.view.View;
-import androidx.navigation.NavController;
-import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
-import androidx.navigation.ui.NavigationUI;
-import com.rn.organizze.R;
 import com.rn.organizze.databinding.ActivityPrincipalBinding;
 
 
@@ -27,9 +23,7 @@ public class PrincipalActivity extends AppCompatActivity {
 
         setSupportActionBar(binding.toolbar);
 
-        //NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_content_principal);
-        //appBarConfiguration = new AppBarConfiguration.Builder(navController.getGraph()).build();
-        //NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
+
 
         binding.fab.setOnClickListener(new View.OnClickListener() {
             @Override
