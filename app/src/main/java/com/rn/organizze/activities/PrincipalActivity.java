@@ -2,22 +2,36 @@ package com.rn.organizze.activities;
 
 import android.content.Intent;
 import android.os.Bundle;
-import com.google.android.material.snackbar.Snackbar;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
+
 import android.view.View;
-import androidx.navigation.ui.AppBarConfiguration;
-import com.rn.organizze.databinding.ActivityPrincipalBinding;
+import android.widget.TextView;
+
+import com.prolificinteractive.materialcalendarview.CalendarDay;
+import com.prolificinteractive.materialcalendarview.MaterialCalendarView;
+import com.prolificinteractive.materialcalendarview.OnMonthChangedListener;
+import com.rn.organizze.R;
 
 
 public class PrincipalActivity extends AppCompatActivity {
 
-    private AppBarConfiguration appBarConfiguration;
-    private ActivityPrincipalBinding binding;
-
+    private TextView textSaudacao, textSaldo;
+    private MaterialCalendarView calendarView;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_principal);
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
 
+        textSaudacao = findViewById(R.id.textSaudacao);
+        textSaldo = findViewById(R.id.textSaldo);
+        calendarView = findViewById(R.id.calendarView);
+        configurarCalendarView();
+
+
+    /*
      binding = ActivityPrincipalBinding.inflate(getLayoutInflater());
      setContentView(binding.getRoot());
 
@@ -31,7 +45,12 @@ public class PrincipalActivity extends AppCompatActivity {
                 Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
                         .setAction("Action", null).show();
             }
-        });
+        });*/
+
+
+
+
+
     }
 
     public void addReceita(View view){
@@ -42,6 +61,17 @@ public class PrincipalActivity extends AppCompatActivity {
         startActivity(new Intent(PrincipalActivity.this, DespesasActivity.class));
     }
 
+    public void configurarCalendarView(){
+        CharSequence meses[] = {"Janeiro","Fevereiro", "Março","Abril","Maio","Junho","Julho","Agosto","Setembro","Outubro","Novembro","Dezembro"};
+        calendarView.setTitleMonths(meses);
+
+        calendarView.setOnMonthChangedListener(new OnMonthChangedListener() {
+            @Override
+            public void onMonthChanged(MaterialCalendarView widget, CalendarDay date) {
+
+            }
+        });
+    }
 
 
 }
