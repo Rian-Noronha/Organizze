@@ -10,13 +10,15 @@
     <com.google.android.material.appbar.AppBarLayout
         android:layout_height="wrap_content"
         android:layout_width="match_parent"
-        android:theme="@style/Theme.Organizze.AppBarOverlay">
+        android:theme="@style/Theme.Organizze.AppBarOverlay"
+        app:elevation="0dp"
+        >
 
         <androidx.appcompat.widget.Toolbar
             android:id="@+id/toolbar"
             android:layout_width = "match_parent"
             android:background="?attr/colorPrimary"
-              app:popupTheme="@style/Theme.Organizze.PopupOverlay"
+            app:popupTheme="@style/Theme.Organizze.PopupOverlay"
             android:layout_height = "?attr/actionBarSize" />
 
   </com.google.android.material.appbar.AppBarLayout>
