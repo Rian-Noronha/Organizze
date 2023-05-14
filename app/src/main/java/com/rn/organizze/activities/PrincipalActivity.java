@@ -130,6 +130,7 @@ public class PrincipalActivity extends AppCompatActivity {
                 movimentacoesRef.child("movimentacao").child(idUsuario).child(mesAnoSelecionado);
                 movimentacoesRef.child(movimentacao.getKey()).removeValue();
                 adapterMovimentacao.notifyItemRemoved(position);
+                atualizarSaldo();
 
             }
         });
@@ -159,6 +160,16 @@ public class PrincipalActivity extends AppCompatActivity {
         usuarioRef = firebaseRef
                 .child("usuarios")
                 .child(idUsuario);
+        if(movimentacao.getTipo().equals("r")){
+            receitaTotal -= movimentacao.getValor();
+            usuarioRef.child("receitaTotal").setValue(receitaTotal);
+        }
+
+        if(movimentacao.getTipo().equals("d")){
+            despesaTotal -= movimentacao.getValor();
+            usuarioRef.child("despesaTotal").setValue(despesaTotal);
+
+        }
 
 
     }
